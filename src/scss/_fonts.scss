@@ -1,0 +1,120 @@
+/** Font Styles **/
+/** Headings **/
+@include media-breakpoint-up (xs) {
+  %heading {
+    margin-top: 0;
+    font-weight: 400;
+    color: $primary-font-color;
+    font-family: 'Raleway', Sans-Serif;
+  }
+  %paragraph {
+    font-family: 'Open Sans', Sans-Serif;
+    color: $secondary-font-color;
+  }
+  h1 {
+    @extend %heading;
+    font-size: $mob-font-size-h1;
+    line-height: $mob-font-size-h1 * 1.5;
+  }
+  h2 {
+    @extend %heading;
+    font-size: $mob-font-size-h2;
+    line-height: $mob-font-size-h2 * 1.5;
+    margin-bottom: 1.25rem
+  }
+  h3 {
+    @extend %heading;
+    font-size: $mob-font-size-h3;
+    line-height: $mob-font-size-h3 * 1.5;
+    margin-bottom: 1.25rem
+  }
+  p {
+    @extend %paragraph;
+    font-size: $mob-font-size-sm;
+    font-weight: 300;
+    line-height: $mob-font-size-sm * 2;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+  }
+  a {
+    @extend %paragraph;
+    font-size: $mob-font-size-sm;
+    font-weight: 300;
+    line-height: $mob-font-size-sm * 1.5;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+  }
+  ul {
+    @extend %paragraph;
+    font-size: $mob-font-size-sm;
+    font-weight: 300;
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: $mob-font-size-sm * 1.5;
+    letter-spacing: 0.05rem;
+  }
+  li {
+    @extend %paragraph;
+    font-size: $mob-font-size-sm;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin: 1rem 0;
+    line-height: $mob-font-size-sm * 1.5;
+    letter-spacing: 0.05rem;
+  }
+}
+
+@include media-breakpoint-up (md) {
+  h1 {
+    font-size: $tab-font-size-h1;
+  }
+  h2 {
+    font-size: $tab-font-size-h2;
+  }
+  h3 {
+    font-size: $tab-font-size-h3;
+  }
+  p {
+    font-size: $tab-font-size-md;
+  }
+  a {
+    font-size: $tab-font-size-md;
+  }
+  a:hover {
+    font-size: $tab-font-size-md;
+  }
+  ul {
+    font-size: $tab-font-size-base;
+  }
+  li {
+    font-size: $tab-font-size-base;
+  }
+}
+
+@include media-breakpoint-up (lg) {
+  h1 {
+    font-size: $desk-font-size-h1;
+  }
+  h2 {
+    font-size: $desk-font-size-h2;
+  }
+  h3 {
+    font-size: $desk-font-size-h3;
+  }
+  p {
+    font-size: $desk-font-size-md;
+  }
+  a {
+    font-size: $desk-font-size-md;
+  }
+  a:hover {
+    font-size: $desk-font-size-md;
+  }
+  ul {
+    font-size: $desk-font-size-md;
+  }
+  li {
+    font-size: $desk-font-size-md;
+  }
+}

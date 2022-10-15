@@ -1,0 +1,46 @@
+.dropbtn {
+  background-color: $secondary-color;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $secondary-color;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+}
+
+.show {
+  display: block;
+}
+

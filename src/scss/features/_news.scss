@@ -1,0 +1,32 @@
+@include media-breakpoint-up (xs) {
+  .news {
+    a {
+      float: right;
+      font-size: 0.75rem;
+      &::after {
+        content: url(../../images/chevron-right.svg);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .news--cta {
+    height: 3rem;
+  }
+}
+
+@include media-breakpoint-up (md) {
+  .news--secondary {
+    display: flex;
+    gap: 1rem;
+  }
+  .news--tertiary {
+    display: flex;
+    gap: 1rem;
+  }
+  .news--more {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

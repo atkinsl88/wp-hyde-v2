@@ -1,0 +1,245 @@
+@include media-breakpoint-up (xs) {
+  .c-card {
+    &--primary {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin-bottom: 1rem;
+      width: auto;
+      &--img {
+        width: 100%;
+        img {
+          width: 100%;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          max-height: 200px;
+          object-fit: cover;
+        }
+      }
+      &--text {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem;
+        p {
+          margin-bottom: 0;
+        }
+        .p-text--date {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    &--secondary {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      &--img {
+        position: relative;
+        overflow: hidden;
+        img {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          object-fit: cover;
+          width: 100%;
+          max-height: 200px;
+        }
+      }
+      &--text {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem;
+        p {
+          margin-bottom: 0;
+        }
+        .p-text--date {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    &--tertiary {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 15px;
+      display: flex;
+      margin-bottom: 1rem;
+      min-height: 225px;
+      &--text {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem;
+        p {
+          margin-bottom: 0;
+        }
+        .p-text--date {
+          font-size: 0.75rem;
+        }
+      }
+      &--img {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 2rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        img {
+          border-radius: 15px;
+          object-fit: cover;
+          max-width: 200px;
+        }
+      }
+    }
+    &--quaternary {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 15px;
+      display: flex;
+      margin-bottom: 1rem;
+      min-height: 225px;
+      &--text {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem;
+        p {
+          margin-bottom: 0;
+        }
+        .p-text--date {
+          font-size: 0.75rem;
+        }
+      }
+      &--img {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 2rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        img {
+          border-radius: 15px;
+          object-fit: cover;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up (md) {
+  .c-card {
+    &--primary {
+      flex-direction: row;
+      &--img {
+        img {
+          max-height: 300px;
+        }
+      }
+    }
+    &--secondary {
+      &--img {
+        height: 40%;
+      }
+      &--text {
+        height: 60%;
+      }
+    }
+    &--tertiary {
+      flex-direction: column-reverse;
+      &--img {
+        margin: 0;
+        justify-content: flex-start;
+        height: 40%;
+        img {
+          max-width: unset;
+          width: 100%;
+        }
+      }
+      &--text {
+        height: 60%;
+      }
+    }
+    &--quaternary {
+      width: 31.5%;
+      flex-direction: column-reverse;
+      &--img {
+        margin: 0rem;
+        justify-content: flex-start;
+        img {
+          max-width: unset;
+          width: 100%;
+        }
+      }
+      &--text {
+        height: 60%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up (lg) {
+  .c-card {
+    &--primary {
+      &--img {
+        img {
+          max-height: 400px;
+        }
+      }
+    }
+    &--secondary {
+      &--img {
+        height: unset;
+        img {
+          max-height: 300px;
+        }
+      }
+    }
+    &--tertiary {
+      flex-direction: row;
+      &--img {
+        margin: 2rem;
+        height: unset;
+      }
+      &--text {
+        width: 80%;
+        height: unset;
+      }
+    }
+    &--quaternary {
+      width: 32%;
+      flex-direction: row;
+      &--img {
+        margin: 2rem;
+        width: 100%;
+      }
+      &--text {
+        width: 80%;
+        height: unset;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up (xl) {
+  .c-card {
+    &--primary {
+      &--img {
+        max-width: 50%;
+      }
+    }
+  }
+}

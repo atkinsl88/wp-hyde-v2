@@ -1,0 +1,44 @@
+/** Colours **/
+$primary-color: #17191E;
+$secondary-color: #1E2027;
+
+/** Font Sizes **/
+$mob-font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$mob-font-size-lg: $mob-font-size-base * 1;
+$mob-font-size-md: $mob-font-size-base * 0.75;
+$mob-font-size-sm: $mob-font-size-base * 0.75;
+$mob-font-size-h1: $mob-font-size-base * 1.25; //xx;
+$mob-font-size-h2: $mob-font-size-base * 1; //xx;
+$mob-font-size-h3: $mob-font-size-base * 0.75; //xx;
+
+$tab-font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$tab-font-size-lg: $tab-font-size-base * 1.15;
+$tab-font-size-md: $tab-font-size-base * 0.75;
+$tab-font-size-sm: $tab-font-size-base * 0.75;
+$tab-font-size-h1: $tab-font-size-base * 1.25; //xx;
+$tab-font-size-h2: $tab-font-size-base * 1; //xx;
+$tab-font-size-h3: $tab-font-size-base * 0.75; //xx;
+
+$desk-font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$desk-font-size-lg: $desk-font-size-base * 1.25; //16;
+$desk-font-size-md: $desk-font-size-base * 1; //16;
+$desk-font-size-sm: $desk-font-size-base * 0.75; //14;
+$desk-font-size-h1: $desk-font-size-base * 1.125; //18;
+$desk-font-size-h2: $desk-font-size-base * 1; //16;
+$desk-font-size-h3: $desk-font-size-base * 0.75; //14;
+
+/** Font Colours **/
+$primary-font-color: #FFFFFF;
+$secondary-font-color: #6C6C6C;
+
+/** Breakpoints **/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px,
+  xxl: 1400px
+);
+
+$gutters: unset;

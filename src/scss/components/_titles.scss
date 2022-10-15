@@ -1,0 +1,14 @@
+.c-title {
+  &--box {
+    margin: 2rem 0;
+  }
+}
+
+.h-title {
+  &--news {
+    color: $primary-font-color;
+  }
+  &--date {
+    color: $secondary-font-color;
+  }
+}

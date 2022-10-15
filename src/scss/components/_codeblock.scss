@@ -1,0 +1,11 @@
+code {
+  background-color: $secondary-color;
+  color: $primary-font-color;
+  padding: 1rem;
+  border: 1px solid $secondary-color;
+  border-radius: 15px;
+  font-size: $mob-font-size-lg;
+  line-height: $mob-font-size-lg * 1.5;
+  margin: 3rem 0;
+  list-style: none;
+}

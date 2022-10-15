@@ -1,0 +1,27 @@
+@include media-breakpoint-up (xs) {
+  .tutorials {
+    background-color: #2D2D2E;
+    margin: 2rem 0;
+    padding: 3rem 0;
+    a {
+      float: right;
+      font-size: 0.75rem;
+      &::after {
+        content: url(../../images/chevron-right.svg);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up (md) {
+  .tutorials--secondary {
+    display: flex;
+    gap: 1rem;
+  }
+  .tutorials--tertiary {
+    display: flex;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,27 @@
+.g-navigation {
+  background-color: $secondary-color;
+  padding: 1rem 0;
+  &--container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--left {
+    img {
+      margin-right: 0.25rem;
+    }
+  }
+  &--right {
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+    input {
+      margin-left: 0.5rem;
+    }
+    img {
+      margin-left: 0.5rem;
+    }
+  }
+  img.g-navigation--inactive {
+    opacity: 0.25;
+  }
+}
