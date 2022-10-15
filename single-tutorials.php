@@ -30,7 +30,7 @@
     <div class="body--content--author">
       <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
       <div class="body--content--author--meta">
-        <p>Author: <?php the_author_meta('display_name', 1); ?></p>
+        <p>Author: <?php the_author_meta('nickname', 1); ?></p>
         <p>Posted on: <?php echo get_the_date(); ?></p>
       </div>
     </div>
