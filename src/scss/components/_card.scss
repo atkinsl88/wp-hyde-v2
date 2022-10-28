@@ -219,10 +219,13 @@
   .c-card {
     &--primary {
       &--img {
-        width: 60%;
+        width: 100%;
         img {
           max-height: 400px;
         }
+      }
+      &--text {
+        width: 100%;
       }
     }
     &--secondary {

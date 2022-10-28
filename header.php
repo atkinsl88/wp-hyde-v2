@@ -19,6 +19,13 @@
 
   <section class="g-sidebar">
 
+    <div class="g-sidebar--search">
+      <form method="get" action="<?php print site_url(); ?>">
+        <input type="text" name="s" placeholder="Search" value="<?php if(isset($_GET['s'])){print $_GET['s'];} ?>">
+        <input type="image" src="<?php echo get_theme_file_uri('src/images/magnifying-glass.svg') ?>">
+      </form>
+    </div>
+
     <div class="g-sidebar--categories">
       <h4>Categories</h4>
       <div class="g-sidebar--categories--items">
@@ -33,7 +40,7 @@
       <?php
         $categories = get_categories();
         foreach($categories as $category) {
-          echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+          echo '<a class="' . get_cat_name($category->term_id) . '" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
         }
       ?>
       </div>
@@ -60,8 +67,6 @@
         <?php } ?>
       </div>
       <div class="g-navigation--right">
-        <!-- Search dropdown -->
-        <a href="/search"><img src="<?php echo get_theme_file_uri('src/images/magnifying-glass.svg') ?>" title="Search" alt="Search"></a>
         <!-- Share dropdown -->
         <?php
           if (get_post_type() === 'news') { ?>

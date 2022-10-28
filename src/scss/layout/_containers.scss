@@ -1,4 +1,9 @@
 @include media-breakpoint-up (xs) {
+  .search {
+    .container {
+      width: 100%;
+    }
+  }
   .container {
     padding-right: 1rem !important;
     padding-left: 1rem !important;

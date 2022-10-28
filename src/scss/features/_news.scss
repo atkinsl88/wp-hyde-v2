@@ -40,12 +40,18 @@
     gap: 0.75rem;
     flex-wrap: wrap;
   }
+  .search {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
 }
 
 @include media-breakpoint-up (xl) {
   .more {
-    display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+  }
+  .search {
+    gap: 1rem;
   }
 }
