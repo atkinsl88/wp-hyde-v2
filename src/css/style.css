@@ -871,13 +871,13 @@
 h4, h3, h2, h1 {
   margin-top: 0;
   font-weight: 400;
-  color: #F8F8F8;
+  color: #E0E0E0;
   font-family: "Raleway", Sans-Serif;
 }
 
 li, ul, a, p {
   font-family: "Open Sans", Sans-Serif;
-  color: #818181;
+  color: #97979C;
 }
 
 h1 {
@@ -990,18 +990,22 @@ li {
     font-size: 0.875rem;
   }
 }
+hr {
+  margin: 1rem 0;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #17191E;
+  background-color: #1E1E1E;
 }
 
 .body--content {
   margin: 3rem 0;
-  max-width: 120ch;
+  max-width: 90ch;
 }
 .body--content h2 {
   margin: 3rem 0 1rem 0;
@@ -1016,15 +1020,15 @@ body {
   font-family: "Nunito", sans-serif;
 }
 .body--content p, .body--content ul, .body--content li {
-  color: #F8F8F8;
+  color: #E0E0E0;
 }
 .body--content a {
-  color: #F8F8F8;
+  color: #E0E0E0;
   text-decoration: underline;
 }
 .body--content hr {
   margin: 3rem 0;
-  background-color: #F8F8F8;
+  background-color: #E0E0E0;
   height: 2px;
   border: navajowhite;
 }
@@ -1073,28 +1077,25 @@ body {
 }
 
 .c-title--box {
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
 .h-title--news {
-  color: #F8F8F8;
+  color: #E0E0E0;
 }
 .h-title--date {
-  color: #818181;
+  color: #97979C;
 }
 
 .c-card--primary {
-  background-color: #1E2027;
-  border: 1px solid #1E2027;
+  background-color: #222323;
+  border: 1px solid #222323;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   height: auto;
   margin-bottom: 1rem;
   width: auto;
-}
-.c-card--primary--img {
-  width: 100%;
 }
 .c-card--primary--img img {
   width: 100%;
@@ -1122,9 +1123,13 @@ body {
 .c-card--primary--text .p-text--date {
   font-size: 0.75rem;
 }
+.c-card--primary--text--display {
+  display: flex;
+  flex-direction: column;
+}
 .c-card--secondary {
-  background-color: #1E2027;
-  border: 1px solid #1E2027;
+  background-color: #222323;
+  border: 1px solid #222323;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -1159,8 +1164,8 @@ body {
   font-size: 0.75rem;
 }
 .c-card--tertiary {
-  background-color: #1E2027;
-  border: 1px solid #1E2027;
+  background-color: #222323;
+  border: 1px solid #222323;
   border-radius: 15px;
   display: flex;
   margin-bottom: 1rem;
@@ -1198,8 +1203,8 @@ body {
   max-width: 200px;
 }
 .c-card--quaternary {
-  background-color: #1E2027;
-  border: 1px solid #1E2027;
+  background-color: #222323;
+  border: 1px solid #222323;
   border-radius: 15px;
   display: flex;
   margin-bottom: 1rem;
@@ -1289,6 +1294,9 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .c-card--primary--img {
+    width: 60%;
+  }
   .c-card--primary--img img {
     max-height: 400px;
   }
@@ -1310,21 +1318,15 @@ body {
     height: unset;
   }
   .c-card--quaternary {
-    width: 32%;
     flex-direction: row;
   }
   .c-card--quaternary--img {
     margin: 2rem;
-    width: 100%;
+    height: unset;
   }
   .c-card--quaternary--text {
     width: 80%;
     height: unset;
-  }
-}
-@media (min-width: 1201px) {
-  .c-card--primary--img {
-    max-width: 50%;
   }
 }
 .wp-block-quote {
@@ -1341,12 +1343,17 @@ body {
   margin-bottom: 0;
 }
 
+.c-hero--container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
 .c-hero--container img {
   width: 100%;
 }
 
 .dropbtn {
-  background-color: #1E2027;
+  background-color: #222323;
   border: none;
   cursor: pointer;
 }
@@ -1360,7 +1367,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #1E2027;
+  background-color: #222323;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -1392,10 +1399,10 @@ body {
 }
 
 code {
-  background-color: #1E2027;
-  color: #F8F8F8;
+  background-color: #222323;
+  color: #E0E0E0;
   padding: 1rem;
-  border: 1px solid #1E2027;
+  border: 1px solid #222323;
   border-radius: 15px;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1403,6 +1410,63 @@ code {
   list-style: none;
 }
 
+.g-sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .g-sidebar {
+    height: 100vh;
+    width: 180px;
+    background-color: #2F3034;
+    position: fixed;
+    padding: 1.5rem;
+    display: block;
+  }
+  .g-sidebar h4 {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: #696969;
+  }
+  .g-sidebar a {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    color: #E9E9EA;
+  }
+  .g-sidebar--categories {
+    margin-bottom: 2rem;
+  }
+  .g-sidebar--categories--items {
+    display: flex;
+    flex-direction: column;
+  }
+  .g-sidebar--categories--items--icon {
+    margin-right: 0.5rem;
+  }
+}
+.search--form {
+  margin-bottom: 2rem;
+}
+.search--form input[type=text] {
+  background-color: #37393E;
+  padding: 0.5rem;
+  border: 1px solid #37393E;
+  border-radius: 5px;
+  width: 100%;
+}
+.search--form input[type=submit] {
+  margin-top: 1rem;
+}
+
+.news {
+  padding: 2rem 0;
+}
+.news h2 {
+  margin-bottom: 0;
+}
 .news a {
   float: right;
   font-size: 0.75rem;
@@ -1415,7 +1479,7 @@ code {
 }
 
 .news--cta {
-  height: 3rem;
+  height: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -1431,12 +1495,27 @@ code {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+  .more {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1201px) {
+  .more {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
 .tutorials {
   background-color: #2D2D2E;
-  margin: 2rem 0;
-  padding: 3rem 0;
+  padding: 2rem 0;
+}
+.tutorials h2 {
+  margin-bottom: 2rem;
 }
 .tutorials a {
   float: right;
@@ -1449,6 +1528,11 @@ code {
   height: 15px;
 }
 
+.tutorials--cta {
+  height: 1rem;
+  background-color: #2D2D2E;
+}
+
 @media (min-width: 768px) {
   .tutorials--secondary {
     display: flex;
@@ -1457,6 +1541,13 @@ code {
   .tutorials--tertiary {
     display: flex;
     gap: 1rem;
+  }
+  .tutorials--more {
+    background-color: #2D2D2E;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
   }
 }
 .row {
@@ -1483,14 +1574,14 @@ code {
   padding-left: 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .container {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    padding-right: 1.5rem !important;
+    padding-left: 16rem !important;
   }
 }
 .g-navigation {
-  background-color: #1E2027;
+  background-color: #222323;
   padding: 1rem 0;
 }
 .g-navigation--container {

@@ -12,9 +12,16 @@
   }
 }
 
-@include media-breakpoint-up (sm) {
+@include media-breakpoint-up (md) {
   .container {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    padding-right: 1.5rem !important;
+    padding-left: 16rem !important;
   }
 }
+
+// @include media-breakpoint-up (lg) {
+//   .container {
+//     padding-right: 1.5rem !important;
+//     padding-left: 16rem !important;
+//   }
+// }

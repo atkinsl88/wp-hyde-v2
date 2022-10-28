@@ -16,6 +16,31 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+  <section class="g-sidebar">
+
+    <div class="g-sidebar--categories">
+      <h4>Categories</h4>
+      <div class="g-sidebar--categories--items">
+        <a href="/news"><img class="g-sidebar--categories--items--icon" src="<?php echo get_theme_file_uri('src/images/letter-case-capitalize.svg') ?>">News</a>
+        <a href="/tutorials"><img class="g-sidebar--categories--items--icon" src="<?php echo get_theme_file_uri('src/images/color-wheel.svg') ?>">Tutorials</a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Tags</h4>
+      <div class="g-sidebar--categories--items">
+      <?php
+        $categories = get_categories();
+        foreach($categories as $category) {
+          echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+        }
+      ?>
+      </div>
+    </div>
+
+  </section>
+
   <nav class="container-fluid g-navigation">
     <div class="container g-navigation--container">
       <div class="g-navigation--left">
@@ -35,6 +60,8 @@
         <?php } ?>
       </div>
       <div class="g-navigation--right">
+        <!-- Search dropdown -->
+        <a href="/search"><img src="<?php echo get_theme_file_uri('src/images/magnifying-glass.svg') ?>" title="Search" alt="Search"></a>
         <!-- Share dropdown -->
         <?php
           if (get_post_type() === 'news') { ?>

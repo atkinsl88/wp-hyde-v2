@@ -1,8 +1,10 @@
 @include media-breakpoint-up (xs) {
   .tutorials {
     background-color: #2D2D2E;
-    margin: 2rem 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
+    h2 {
+      margin-bottom: 2rem;
+    }
     a {
       float: right;
       color: #FFFFFF;
@@ -14,6 +16,10 @@
       }
     }
   }
+  .tutorials--cta {
+    height: 1rem;
+    background-color: #2D2D2E;
+  }
 }
 
 @include media-breakpoint-up (md) {
@@ -24,5 +30,12 @@
   .tutorials--tertiary {
     display: flex;
     gap: 1rem;
+  }
+  .tutorials--more {
+    background-color: #2D2D2E;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
   }
 }

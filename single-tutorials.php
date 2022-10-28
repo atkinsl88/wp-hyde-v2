@@ -1,9 +1,19 @@
 <?php get_header(); ?>
 
 <div class="container">
+  <div class="body--content container">
+
   <div class="c-title--box">
     <h1 class="h-title--news"><?php the_title(); ?></h1>
     <h1 class="h-title--date"><?php echo get_the_date(); ?></h1>
+  </div>
+
+    <div class="c-hero--container">
+      <img src="<?php the_field('tutorial_image')?>" alt="Placeholder">
+    </div>
+
+    <?php the_content(); ?>
+    <h2>Tags</h2>
     <div class="body--content--categories">
       <?php 
         $id = get_the_ID();
@@ -15,17 +25,7 @@
               <?php echo $cat->name; echo ( $n > 0 && $n < $c ? : ''); ?>
           </p>
       <?php endforeach; ?>
-    </div>  
-  </div>
-</div>
-
-<div class="c-hero--container container-fluid">
-  <img src="<?php the_field('tutorial_image')?>" alt="Placeholder">
-</div>
-
-<div class="container">
-  <div class="body--content container">
-    <?php the_content(); ?>
+    </div> 
     <hr>
     <div class="body--content--author">
       <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
@@ -35,12 +35,6 @@
       </div>
     </div>
     <hr>
-  </div>
-</div>
-
-<div class="container">
-  <div class="c-title--box">
-    <h1 class="h-title--news">More Tutorials</h1>
   </div>
 </div>
 

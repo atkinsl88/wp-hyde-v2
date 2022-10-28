@@ -1,6 +1,7 @@
 /** Colours **/
-$primary-color: #17191E;
-$secondary-color: #1E2027;
+$primary-color: #1E1E1E;
+$secondary-color: #222323;
+$third-color: #2F3034;
 
 /** Font Sizes **/
 $mob-font-size-base: 1rem; // Assumes the browser default, typically `16px`
@@ -31,8 +32,8 @@ $desk-font-size-h3: $desk-font-size-base * 1.125; // 18;
 $desk-font-size-h4: $desk-font-size-base * 1; // 16;
 
 /** Font Colours **/
-$primary-font-color: #F8F8F8;
-$secondary-font-color: #818181;
+$primary-font-color: #E0E0E0;
+$secondary-font-color: #97979C;
 
 /** Breakpoints **/
 $grid-breakpoints: (

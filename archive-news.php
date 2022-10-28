@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="c-title--box">
-    <h1 class="h-title--news">More</h1>
+    <h1 class="h-title--news">More News</h1>
   </div>
 </div>
 
@@ -21,7 +21,12 @@
       <p class="p-text--date"><?php echo get_the_date(); ?></p>
     </div>
     <div class="c-card--quaternary--img">
-      <img src="<?php the_field('news_image')?>" alt="Placeholder">
+      <?php
+        if (get_post_type() == 'news') { ?>
+          <img src="<?php the_field('news_image')?>" alt="Placeholder">
+        <?php } else { ?>
+          <img src="<?php the_field('tutorial_image')?>" alt="Placeholder">
+      <?php } ?> 
     </div>
   </div>
   <?php }

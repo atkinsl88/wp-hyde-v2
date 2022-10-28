@@ -10,7 +10,6 @@
       margin-bottom: 1rem;
       width: auto;
       &--img {
-        width: 100%;
         img {
           width: 100%;
           border-top-right-radius: 15px;
@@ -36,6 +35,10 @@
         }
         .p-text--date {
           font-size: 0.75rem;
+        }
+        &--display {
+          display: flex;
+          flex-direction: column;
         }
       }
     }
@@ -216,6 +219,7 @@
   .c-card {
     &--primary {
       &--img {
+        width: 60%;
         img {
           max-height: 400px;
         }
@@ -241,11 +245,10 @@
       }
     }
     &--quaternary {
-      width: 32%;
       flex-direction: row;
       &--img {
         margin: 2rem;
-        width: 100%;
+        height: unset;
       }
       &--text {
         width: 80%;
@@ -255,12 +258,12 @@
   }
 }
 
-@include media-breakpoint-up (xl) {
-  .c-card {
-    &--primary {
-      &--img {
-        max-width: 50%;
-      }
-    }
-  }
-}
+// @include media-breakpoint-up (xl) {
+//   .c-card {
+//     &--primary {
+//       &--img {
+//         max-width: 50%;
+//       }
+//     }
+//   }
+// }

@@ -9,78 +9,84 @@
   </div>
 </section>
 
-<section class="news--featured">
-  <div class="container">
-    <?php
-      $blogPost001 = new WP_Query(array(
+<section class="news">
+  <section class="news--featured">
+    <div class="container">
+      <?php
+        $blogPost001 = new WP_Query(array(
+          'post_type' => 'news',
+          'posts_per_page' => 1,
+        ));
+        while($blogPost001->have_posts()) {
+        $blogPost001->the_post();
+      ?>
+      <div class="col c-card--primary">
+        <div class="c-card--primary--img">
+          <img src="<?php the_field('news_image')?>" alt="Placeholder">
+        </div>
+        <div class="c-card--primary--text">
+          <div class="c-card--primary--text--display">
+            <a href="<?php the_permalink(); ?>"><h2 class="h-title--intro"><?php the_title(); ?></h2></a>
+            <p class="p-text--excerpt"><?php the_excerpt(); ?></p>
+          </div>
+          <div>
+            <p class="p-text--date"><?php echo get_the_date(); ?></p>
+          </div>
+        </div>
+      </div>
+      <?php } echo paginate_links(); ?>
+    </div>
+  </section>
+  <section class="news--secondary container">
+    <?php 
+      $row2 = new WP_Query(array(
+        'posts_per_page' => 3,
         'post_type' => 'news',
-        'posts_per_page' => 1,
+        'offset' => 1
       ));
-      while($blogPost001->have_posts()) {
-      $blogPost001->the_post();
+      while ($row2->have_posts()) {
+      $row2->the_post(); 
     ?>
-    <div class="col c-card--primary">
-      <div class="c-card--primary--img">
+    <div class="col c-card--secondary">
+      <div class="c-card--secondary--img">
         <img src="<?php the_field('news_image')?>" alt="Placeholder">
       </div>
-      <div class="c-card--primary--text">
-        <div>
-          <a href="<?php the_permalink(); ?>"><h2 class="h-title--intro"><?php the_title(); ?></h2></a>
-          <p class="p-text--excerpt"><?php the_excerpt(); ?></p>
-        </div>
-        <div>
-          <p class="p-text--date"><?php echo get_the_date(); ?></p>
-        </div>
+      <div class="c-card--secondary--text">
+        <a href="<?php the_permalink(); ?>"><h2 class="h-title--intro"><?php the_title(); ?></h2></a>
+        <p class="p-text--date"><?php echo get_the_date(); ?></p>
       </div>
     </div>
-    <?php } echo paginate_links(); ?>
-  </div>
+    <?php } ?>
+  </section>
+  <section class="news--tertiary container">
+    <?php 
+      $row3 = new WP_Query(array(
+        'posts_per_page' => 3,
+        'post_type' => 'news',
+        'offset' => 4
+      ));
+      while ($row3->have_posts()) {
+      $row3->the_post(); 
+    ?>
+    <div class="col c-card--tertiary">
+      <div class="c-card--tertiary--text">
+        <a href="<?php the_permalink(); ?>"><h3 class="h-title--intro"><?php the_title(); ?></h3></a>
+        <p class="p-text--date"><?php echo get_the_date(); ?></p>
+      </div>
+      <div class="c-card--tertiary--img">
+        <img src="<?php the_field('news_image')?>" alt="Placeholder">
+      </div>
+    </div>
+    <?php }
+    ?>
+  </section>
+  <section class="news news--cta">
+    <div class="container">
+      <a href="/news">Read more News</a>
+    </div>
+  </section>
 </section>
 
-<section class="news--secondary container">
-  <?php 
-    $row2 = new WP_Query(array(
-      'posts_per_page' => 3,
-      'post_type' => 'news',
-      'offset' => 1
-    ));
-    while ($row2->have_posts()) {
-    $row2->the_post(); 
-  ?>
-  <div class="col c-card--secondary">
-    <div class="c-card--secondary--img">
-      <img src="<?php the_field('news_image')?>" alt="Placeholder">
-    </div>
-    <div class="c-card--secondary--text">
-      <a href="<?php the_permalink(); ?>"><h2 class="h-title--intro"><?php the_title(); ?></h2></a>
-      <p class="p-text--date"><?php echo get_the_date(); ?></p>
-    </div>
-  </div>
-  <?php } ?>
-</section>
-
-<section class="news--tertiary container">
-  <?php 
-    $row3 = new WP_Query(array(
-      'posts_per_page' => 3,
-      'post_type' => 'news',
-      'offset' => 4
-    ));
-    while ($row3->have_posts()) {
-    $row3->the_post(); 
-  ?>
-  <div class="col c-card--tertiary">
-    <div class="c-card--tertiary--text">
-      <a href="<?php the_permalink(); ?>"><h3 class="h-title--intro"><?php the_title(); ?></h3></a>
-      <p class="p-text--date"><?php echo get_the_date(); ?></p>
-    </div>
-    <div class="c-card--tertiary--img">
-      <img src="<?php the_field('news_image')?>" alt="Placeholder">
-    </div>
-  </div>
-  <?php }
-  ?>
-</section>
 
 <section class="tutorials container-fluid">
   <div class="container">
@@ -129,26 +135,26 @@
     <?php }
     ?>
   </div>
-  <div class="container">
-    <a href="/tutorials">Read more Tutorials</a>
-  </div>
+  <section class="news news--cta">
+    <div class="container">
+      <a href="/tutorials">Read more Tutorials</a>
+    </div>
+</section>
 </section>
 
 <section class="news container">
-  <h2>More News</h2>
+  <h2>More</h2>
 </section>
 
 
-<section class="news--more container">
+<section class="more container">
   <?php 
     $row5 = new WP_Query(array(
-      'post_type' => 'news',
-      'offset' => 7
+      'post_type' => array('news', 'tutorials'),
+      'offset' => 14
     ));
-
     while ($row5->have_posts()) {
     $row5->the_post(); 
-    
   ?>
   <div class="c-card--quaternary">
     <div class="c-card--quaternary--text">
@@ -156,17 +162,16 @@
       <p class="p-text--date"><?php echo get_the_date(); ?></p>
     </div>
     <div class="c-card--quaternary--img">
-      <img src="<?php the_field('news_image')?>" alt="Placeholder">
+      <?php
+        if (get_post_type() == 'news') { ?>
+          <img src="<?php the_field('news_image')?>" alt="Placeholder">
+        <?php } else { ?>
+          <img src="<?php the_field('tutorial_image')?>" alt="Placeholder">
+      <?php } ?> 
     </div>
   </div>
   <?php }
   ?>
-</section>
-
-<section class="news news--cta">
-  <div class="container">
-    <a href="/news">Read more News</a>
-  </div>
 </section>
 
 <?php get_footer(); ?>

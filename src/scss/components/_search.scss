@@ -1,0 +1,17 @@
+@include media-breakpoint-up (xs) {
+  .search {
+    &--form {
+      margin-bottom: 2rem;
+      input[type="text"] {
+        background-color: #37393E;
+        padding: 0.5rem;
+        border: 1px solid #37393E;
+        border-radius: 5px;
+        width: 100%;
+      }
+      input[type="submit"] {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

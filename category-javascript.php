@@ -2,15 +2,15 @@
 
 <div class="container">
   <div class="c-title--box">
-    <h1 class="h-title--news">More Tutorials</h1>
+    <h1 class="h-title--news">JavaScript</h1>
   </div>
 </div>
 
 <section class="news--more container">
-  <?php 
+  <?php
     $row1 = new WP_Query(array(
-      'posts_per_page' => 30,
-      'post_type' => 'tutorials'
+      'post_type' => 'any',
+      'category_name' => 'JavaScript'
     ));
     while ($row1->have_posts()) {
     $row1->the_post(); 
@@ -32,7 +32,5 @@
   <?php }
   ?>
 </section>
-
-
 
 <?php get_footer(); ?>
